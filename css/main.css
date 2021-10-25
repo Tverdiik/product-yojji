@@ -141,6 +141,7 @@ ul {
 
 .header__change {
   max-height: 32px;
+  cursor: pointer;
 }
 
 .introduction {
