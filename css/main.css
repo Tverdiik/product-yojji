@@ -157,7 +157,7 @@ ul {
 }
 
 .introduction__image {
-  width: 100%;
+  max-width: 100%;
   z-index: -1;
 }
 
@@ -287,7 +287,7 @@ ul {
 }
 
 .information__image {
-  width: 100%;
+  max-width: 100%;
 }
 
 .information__text {
@@ -347,7 +347,7 @@ ul {
 }
 
 .comment__image {
-  width: 100%;
+  max-width: 100%;
 }
 
 .comment__frame {
@@ -454,7 +454,7 @@ ul {
 }
 
 .info__image {
-  width: 100%;
+  max-width: 100%;
   border-radius: 8px 8px 0 0;
 }
 
