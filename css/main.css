@@ -686,9 +686,8 @@ ul {
   margin-bottom: 20px;
 }
 
-.product-footer p {
-  text-align: center;
-  padding-bottom: 46px;
+.social {
+  max-height: 40px;
 }
 
 .footer__items {
