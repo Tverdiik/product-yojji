@@ -215,8 +215,9 @@ ul {
   padding-bottom: 90px;
 }
 
-.section_down {
+.background_down {
   background: url("../img/background-down.png") no-repeat bottom;
+  background-size: 100%;
 }
 
 .feature__title {
@@ -315,8 +316,9 @@ ul {
   padding-top: 50px;
 }
 
-.section_up {
+.background_up {
   background: url("../img/background-up.png") no-repeat top;
+  background-size: 100%;
 }
 
 .reviews__text {
