@@ -364,6 +364,7 @@ ul {
   border-radius: 26.5px;
   padding: 14px 20px;
   max-height: 53px;
+  z-index: 2;
 }
 
 .comment__circle_big {
@@ -373,7 +374,7 @@ ul {
   box-shadow: 0px 2px 15px rgba(23, 58, 86, 0.1);
   border-radius: 99px;
   position: absolute;
-  z-index: -1;
+  z-index: 1;
   left: 40%;
   top: 62%;
 }
@@ -385,7 +386,7 @@ ul {
   box-shadow: 0px 2px 15px rgba(23, 58, 86, 0.1);
   border-radius: 99px;
   position: absolute;
-  z-index: -1;
+  z-index: 1;
   left: 37%;
   top: 80%;
 }
@@ -397,7 +398,7 @@ ul {
   box-shadow: 0px 2px 15px rgba(23, 58, 86, 0.1);
   border-radius: 99px;
   position: absolute;
-  z-index: -1;
+  z-index: 1;
   left: 50%;
   top: 62%;
 }
@@ -409,7 +410,7 @@ ul {
   box-shadow: 0px 2px 15px rgba(23, 58, 86, 0.1);
   border-radius: 99px;
   position: absolute;
-  z-index: -1;
+  z-index: 1;
   left: 55%;
   top: 80%;
 }
