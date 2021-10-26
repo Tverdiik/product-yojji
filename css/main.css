@@ -945,7 +945,7 @@ ul {
     display: flex;
     align-items: center;
     position: absolute;
-    top: 3.5%;
+    top: 3%;
     width: 26px;
     height: 26px;
     cursor: pointer;
@@ -1131,7 +1131,7 @@ ul {
     display: flex;
     align-items: center;
     position: absolute;
-    top: 3.5%;
+    top: 3%;
     width: 26px;
     height: 26px;
     cursor: pointer;
@@ -1347,7 +1347,7 @@ ul {
     display: flex;
     align-items: center;
     position: absolute;
-    top: 3.5%;
+    top: 3%;
     width: 26px;
     height: 26px;
     cursor: pointer;
