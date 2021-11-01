@@ -141,6 +141,10 @@ ul {
 }
 
 .header__btn:last-child {
+  padding: 0;
+}
+
+.header__btn:last-child {
   margin: 0;
 }
 
@@ -180,6 +184,10 @@ ul {
 .introduction__buttons {
   display: flex;
   align-items: center;
+}
+
+.introduction__btn._watch {
+  padding: 0;
 }
 
 .watch__link {
@@ -425,41 +433,42 @@ ul {
   margin-bottom: 64px;
 }
 
-.info {
+.cards__info {
   display: flex;
   flex-direction: column;
-  max-width: 347px;
+  width: 32%;
+  max-height: 348px;
   border: 1px lightgray solid;
   border-radius: 8px;
   cursor: pointer;
 }
 
-.info:hover .info__title {
+.cards__info:hover .info__title {
   color: var(--accept-color);
 }
 
-.info__title._active {
+.cards__title._active {
   color: var(--accept-color);
 }
 
-.info__image {
+.cards__image {
   max-width: 100%;
   border-radius: 8px 8px 0 0;
 }
 
-.info__frame {
+.cards__frame {
   margin-bottom: 24px;
 }
 
-.info__title {
+.cards__title {
   margin-bottom: 30px;
 }
 
-.info__description {
+.cards__description {
   margin-bottom: 12px;
 }
 
-.info__text {
+.cards__text {
   padding-left: 24px;
 }
 
@@ -495,12 +504,12 @@ ul {
   margin-bottom: 50px;
 }
 
-.prices__tiles {
+.prices__packages {
   display: flex;
   justify-content: space-between;
 }
 
-.tile {
+.package {
   width: 27%;
   padding: 20px 0;
   overflow: hidden;
@@ -513,49 +522,49 @@ ul {
   cursor: default;
 }
 
-.tile__title,
-.tile__description {
+.package__title,
+.package__description {
   display: flex;
   align-items: center;
 }
 
-.tile__title {
+.package__title {
   height: 64px;
   margin-bottom: 8px;
 }
 
-.tile__description {
+.package__description {
   height: 40px;
   margin-bottom: 16px;
 }
 
-.tile__price {
+.package__price {
   height: 100px;
   margin-bottom: 16px;
 }
 
-.tile__option {
+.package__option {
   height: 22px;
   margin-bottom: 16px;
 }
 
-.tile__option:last-child {
+.package__option:last-child {
   margin-bottom: 38px;
 }
 
-.tile:hover {
+.package:hover {
   background: var(--accept-color);
   color: #ffffff;
   transition: var(--change-transition);
 }
 
-.tile:hover .price__number,
-.tile:hover .price__dollar {
+.package:hover .price__number,
+.package:hover .price__dollar {
   color: #ffffff;
   transition: var(--change-transition);
 }
 
-.tile:hover .tile__btn {
+.package:hover .package__btn {
   background: #ffffff;
   transition: var(--change-transition);
   color: var(--accept-color);
@@ -588,7 +597,7 @@ ul {
   font-weight: 400;
 }
 
-.tile__btn {
+.package__btn {
   font-family: Montserrat;
   font-weight: 600;
   font-size: 18px;
@@ -665,7 +674,7 @@ ul {
 }
 
 .footer__logo .logo__image {
-  max-width: 32px;
+  width: 32px;
 }
 
 .footer__logo .logo__text {
@@ -750,12 +759,15 @@ ul {
   text-align: center;
 }
 
-@media (max-width: 1024px) and (min-width: 769px) {
-  ._wide {
-    max-width: 960px;
+@media (max-width: 1200px) and (min-width: 1025px) {
+  .container {
+    width: 90%;
   }
-  ._thin {
-    max-width: 940px;
+}
+
+@media (max-width: 1024px) and (min-width: 769px) {
+  .container {
+    width: 95%;
   }
   .description {
     font-size: 15px;
@@ -772,7 +784,7 @@ ul {
     margin-right: 8px;
     font-weight: 600;
   }
-  .header__change {
+  .header__theme {
     width: 24px;
   }
   .introduction {
@@ -783,14 +795,11 @@ ul {
     margin-top: 60px;
   }
   .introduction__description {
-    max-width: 100%;
+    padding: 0;
     margin-bottom: 20px;
   }
   .introduction__btn {
     margin-right: 10px;
-  }
-  .introduction__frame {
-    max-width: 450px;
   }
   .introduction__title {
     font-size: 32px;
@@ -798,13 +807,19 @@ ul {
   .introduction__text {
     font-size: 16px;
   }
-  .feature {
-    margin-bottom: 75px;
-    padding-bottom: 50px;
-  }
   .title {
     font-size: 24px;
     margin-bottom: 12px;
+  }
+  .feature__content {
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  .feature__card {
+    align-items: center;
+    text-align: center;
+    width: 35%;
+    margin-bottom: 15px;
   }
   .information__subtitle {
     font-size: 15px;
@@ -813,10 +828,10 @@ ul {
     margin-bottom: 75px;
   }
   .information__text {
-    max-width: 400px;
+    width: 90%;
   }
   .information__frame {
-    max-width: 475px;
+    width: 90%;
   }
   .information__title {
     font-size: 24px;
@@ -855,20 +870,19 @@ ul {
   .cards {
     margin-bottom: 32px;
   }
-  .info {
-    max-width: 245px;
-    min-height: 245px;
+  .cards__info {
+    width: 32%;
   }
-  .info__text {
+  .cards__text {
     padding-left: 12px;
   }
-  .info__title {
+  .cards__title {
     font-size: 18px;
   }
-  .info__description {
+  .cards__description {
     font-size: 15px;
   }
-  .info__frame {
+  .cards__frame {
     margin-bottom: 5px;
   }
   .prices__description {
@@ -877,10 +891,10 @@ ul {
   .prices__text {
     margin-bottom: 25px;
   }
-  .prices__tiles {
+  .prices__packages {
     justify-content: space-around;
   }
-  .tile {
+  .package {
     min-width: 240px;
   }
   .contact__form {
@@ -895,6 +909,12 @@ ul {
   }
   ._column {
     flex-direction: column;
+  }
+  header > .container {
+    width: 92%;
+  }
+  .container {
+    width: 90%;
   }
   .header {
     height: 70px;
@@ -968,44 +988,46 @@ ul {
     text-align: center;
   }
   .introduction__frame {
-    max-width: 550px;
+    width: 90%;
+    margin-bottom: 20px;
   }
   .introduction__info {
+    width: 90%;
     padding: 0;
     margin: 0;
   }
-  .introduction__title {
-    max-width: 500px;
-  }
   .introduction__description {
-    max-width: none;
+    padding: 0;
   }
   .introduction__buttons {
     justify-content: center;
   }
-  .feature {
+  .main__feature {
     margin-bottom: 50px;
   }
   .feature__title {
-    max-width: 100%;
+    padding: 0;
     margin-bottom: 20px;
   }
   .feature__content {
     flex-wrap: wrap;
     justify-content: space-around;
   }
-  .card {
-    max-width: 40%;
-    margin-bottom: 15px;
+  .feature__card {
+    align-items: center;
+    text-align: center;
+    width: 60%;
+    margin-bottom: 25px;
   }
   .information {
     margin-bottom: 50px;
   }
   .information__frame {
+    width: 90%;
     margin-bottom: 25px;
   }
   .information__text {
-    max-width: 550px;
+    width: 90%;
   }
   .reviews {
     margin-bottom: 50px;
@@ -1028,24 +1050,35 @@ ul {
     flex-direction: column;
     align-items: center;
   }
-  .info {
-    border: none;
+  .cards__info {
+    width: 47%;
     margin-bottom: 5px;
   }
-  .info__text {
-    padding: 0;
+  .cards__title {
+    font-size: 20px;
+  }
+  .cards__text {
+    padding-left: 12px;
+  }
+  .cards__frame {
+    margin-bottom: 6px;
+  }
+  .cards__description {
+    font-size: 14px;
+    margin-bottom: 4px;
   }
   .news__dots {
     display: none;
   }
-  .prices__tiles {
+  .prices__packages {
     flex-direction: column;
     align-items: center;
   }
-  .tile {
+  .package {
+    width: 322px;
     margin-bottom: 32px;
   }
-  .tile:last-child {
+  .package:last-child {
     margin-bottom: 0;
   }
   .contact__form {
@@ -1073,14 +1106,17 @@ ul {
   ._column {
     flex-direction: column;
   }
-  ._thin,
-  ._wide {
-    margin: 0;
+  header > .container {
+    width: 96%;
+  }
+  .container {
+    width: 90%;
+    padding: 0;
   }
   .header {
     height: 70px;
     box-shadow: 0px -2px 8px rgba(0, 0, 0, 0.25);
-    padding: 0 30px;
+    padding: 0 2%;
     margin-bottom: 30px;
   }
   .navigation__list {
@@ -1157,15 +1193,17 @@ ul {
     margin-bottom: 100px;
   }
   .introduction__frame {
-    max-width: 338px;
+    width: 90%;
   }
   .introduction__info {
+    width: 90%;
     padding: 0;
     margin: 0;
   }
   .introduction__description,
   .introduction__title {
     max-width: none;
+    padding: 0;
   }
   .introduction__title {
     font-size: 30px;
@@ -1180,15 +1218,15 @@ ul {
   .introduction__btn {
     padding: 13px 20px;
   }
-  .feature {
+  .main__feature {
     margin-bottom: 100px;
   }
-  .feature {
+  .main__feature {
     padding: 30px;
   }
   .feature > .title {
-    max-width: 100%;
     margin-bottom: 20px;
+    padding: 0;
   }
   .feature__content {
     flex-wrap: wrap;
@@ -1197,18 +1235,18 @@ ul {
   .card {
     align-items: center;
     text-align: center;
-    max-width: 55%;
+    width: 55%;
     margin-bottom: 15px;
   }
   .information {
     margin-bottom: 50px;
   }
   .information__frame {
-    max-width: 349px;
+    width: 90%;
     margin-bottom: 25px;
   }
   .information__text {
-    padding: 0 30px 0 30px;
+    width: 90%;
   }
   .option__image {
     margin-right: 15px;
@@ -1234,23 +1272,26 @@ ul {
     flex-direction: column;
     align-items: center;
   }
-  .info {
+  .cards__info {
+    width: 90%;
+    border: none;
     margin-bottom: 5px;
   }
-  .info__text {
+  .cards__text {
     padding: 0;
   }
   .news__dots {
     display: none;
   }
-  .prices__tiles {
+  .prices__packages {
     flex-direction: column;
     align-items: center;
   }
-  .tile {
+  .package {
+    width: 310px;
     margin-bottom: 32px;
   }
-  .tile:last-child {
+  .package:last-child {
     margin-bottom: 0;
   }
   .contact__form {
@@ -1285,9 +1326,11 @@ ul {
 }
 
 @media (max-width: 320px) {
-  ._thin,
-  ._wide {
-    margin: 0;
+  .container {
+    width: 90%;
+  }
+  header > .container {
+    width: 96%;
   }
   ._column {
     flex-direction: column;
@@ -1298,7 +1341,7 @@ ul {
   .header {
     height: 70px;
     box-shadow: 0px -2px 8px rgba(0, 0, 0, 0.25);
-    padding: 0 30px;
+    padding: 0 2%;
     margin-bottom: 30px;
   }
   .navigation__list {
@@ -1368,15 +1411,15 @@ ul {
     justify-content: center;
     align-items: center;
     text-align: center;
-    width: 100%;
     margin-bottom: 50px;
   }
   .introduction__info {
-    margin: 0;
-    padding: 0;
+    margin-top: 0;
+    width: 95%;
   }
   .introduction__description,
   .introduction__title {
+    padding: 0;
     max-width: none;
   }
   .introduction__title {
@@ -1388,7 +1431,8 @@ ul {
     margin-bottom: 12px;
   }
   .introduction__frame {
-    max-width: 300px;
+    width: 90%;
+    margin-bottom: 25px;
   }
   .introduction__buttons {
     justify-content: center;
@@ -1396,10 +1440,16 @@ ul {
   .introduction__btn {
     padding: 8px 12px;
   }
+  .introduction__btn:first-child {
+    margin-right: 10px;
+  }
+  .introduction__btn:last-child {
+    margin-right: 0;
+  }
   .watch__link {
     font-size: 14px;
   }
-  .feature {
+  .main__feature {
     margin-bottom: 50px;
   }
   .title {
@@ -1410,12 +1460,15 @@ ul {
     font-weight: 600;
   }
   .feature > .title {
-    max-width: 90%;
+    padding: 0 5%;
     margin-bottom: 20px;
   }
   .feature__content {
     flex-wrap: wrap;
     justify-content: space-around;
+  }
+  .feature__card {
+    width: 90%;
   }
   .feature__btn {
     font-size: 14px;
@@ -1427,13 +1480,14 @@ ul {
     margin-bottom: 25px;
   }
   .information__frame {
-    max-width: 300px;
+    width: 90%;
     margin-bottom: 25px;
   }
   .information {
     margin-bottom: 50px;
   }
   .information__text {
+    width: 95%;
     font-size: 14px;
     padding: 0 20px 0 20px;
   }
@@ -1474,24 +1528,22 @@ ul {
     flex-direction: column;
     align-items: center;
   }
-  .info {
+  .cards__info {
     border: none;
-    max-width: 290px;
-    min-height: 260px;
-    max-height: 260px;
+    width: 85%;
     margin-bottom: 5px;
   }
-  .info__text {
+  .cards__text {
     padding: 0;
   }
-  .info__frame {
+  .cards__frame {
     margin-bottom: 4px;
   }
-  .info__description {
+  .cards__description {
     font-size: 14px;
     margin-bottom: 4px;
   }
-  .info__title {
+  .cards__title {
     font-size: 20px;
   }
   .news__dots {
@@ -1500,16 +1552,16 @@ ul {
   .prices__description {
     font-size: 14px;
   }
-  .prices__tiles {
+  .prices__packages {
     flex-direction: column;
     align-items: center;
     margin-bottom: 25px;
   }
-  .tile {
-    min-width: 290px;
+  .package {
+    width: 290px;
     margin-bottom: 32px;
   }
-  .tile:last-child {
+  .package:last-child {
     margin-bottom: 0;
   }
   .contact__form {
