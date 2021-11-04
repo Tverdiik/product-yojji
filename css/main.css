@@ -956,7 +956,7 @@ ul {
     display: flex;
     align-items: center;
     position: absolute;
-    top: 3%;
+    top: 5.5%;
     width: 26px;
     height: 26px;
     cursor: pointer;
@@ -1158,7 +1158,7 @@ ul {
     display: flex;
     align-items: center;
     position: absolute;
-    top: 3%;
+    top: 5.5%;
     width: 26px;
     height: 26px;
     cursor: pointer;
@@ -1380,7 +1380,7 @@ ul {
     display: flex;
     align-items: center;
     position: absolute;
-    top: 3%;
+    top: 5.5%;
     width: 26px;
     height: 26px;
     cursor: pointer;
